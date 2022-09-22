@@ -1,16 +1,15 @@
-from django.shortcuts import render
-from wishlist.models import BarangWishlist
-from django.http import HttpResponse
-from django.core import serializers
-from django.shortcuts import redirect
-from django.contrib.auth.forms import UserCreationForm
-from django.contrib import messages
-from django.contrib.auth import authenticate, login
-from django.contrib.auth import logout
-from django.contrib.auth.decorators import login_required
 import datetime
-from django.http import HttpResponseRedirect
+from django.shortcuts import render, redirect
+from wishlist.models import BarangWishlist
+from django.http import HttpResponse, HttpResponseRedirect
+from django.core import serializers 
 from django.urls import reverse
+from django.contrib import messages
+from django.contrib.auth import authenticate, login , logout
+from django.contrib.auth.forms import UserCreationForm
+from django.contrib.auth.decorators import login_required
+
+
 
 # Create your views here.
 @login_required(login_url='/wishlist/login/')
